@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Bingo/static/css/main.6daf367f.css",
-    "main.js": "/Bingo/static/js/main.b9f59c5b.js",
-    "static/media/BackgroundMusic.mp3": "/Bingo/static/media/BackgroundMusic.e9b4d4fd644ed74407d6.mp3",
-    "static/media/ClickSound.wav": "/Bingo/static/media/ClickSound.bc2476b2ee661e644270.wav",
-    "index.html": "/Bingo/index.html",
-    "main.6daf367f.css.map": "/Bingo/static/css/main.6daf367f.css.map",
-    "main.b9f59c5b.js.map": "/Bingo/static/js/main.b9f59c5b.js.map"
+    "main.css": "/bingo-battle/static/css/main.6daf367f.css",
+    "main.js": "/bingo-battle/static/js/main.8b0a8938.js",
+    "static/media/BackgroundMusic.mp3": "/bingo-battle/static/media/BackgroundMusic.e9b4d4fd644ed74407d6.mp3",
+    "static/media/ClickSound.wav": "/bingo-battle/static/media/ClickSound.bc2476b2ee661e644270.wav",
+    "index.html": "/bingo-battle/index.html",
+    "main.6daf367f.css.map": "/bingo-battle/static/css/main.6daf367f.css.map",
+    "main.8b0a8938.js.map": "/bingo-battle/static/js/main.8b0a8938.js.map"
   },
   "entrypoints": [
     "static/css/main.6daf367f.css",
-    "static/js/main.b9f59c5b.js"
+    "static/js/main.8b0a8938.js"
   ]
 }
