@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Bingo/static/css/main.6daf367f.css",
+    "main.js": "/Bingo/static/js/main.b9f59c5b.js",
+    "static/media/BackgroundMusic.mp3": "/Bingo/static/media/BackgroundMusic.e9b4d4fd644ed74407d6.mp3",
+    "static/media/ClickSound.wav": "/Bingo/static/media/ClickSound.bc2476b2ee661e644270.wav",
+    "index.html": "/Bingo/index.html",
+    "main.6daf367f.css.map": "/Bingo/static/css/main.6daf367f.css.map",
+    "main.b9f59c5b.js.map": "/Bingo/static/js/main.b9f59c5b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6daf367f.css",
+    "static/js/main.b9f59c5b.js"
+  ]
+}
