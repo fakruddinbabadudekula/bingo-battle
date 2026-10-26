@@ -1,0 +1,521 @@
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 15% 0%, rgba(48, 128, 105, 0.24), transparent 35rem),
+    radial-gradient(ellipse at 95% 80%, rgba(44, 97, 91, 0.16), transparent 32rem),
+    #0b1717;
+}
+
+.site-header {
+  border-bottom: 1px solid rgba(202, 227, 216, 0.1);
+  background: rgba(8, 20, 20, 0.82);
+}
+
+.navigation {
+  min-height: 76px;
+  max-width: 1240px;
+  padding: 0 28px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.brand {
+  color: #f3f7f5;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand span {
+  color: #80e0bb;
+  margin-left: 5px;
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.select-control,
+.check-control {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #c0d0ca;
+  font-size: 0.9rem;
+}
+
+.select-control select {
+  border: 1px solid #304a43;
+  border-radius: 8px;
+  padding: 9px 32px 9px 11px;
+  color: #f3f7f5;
+  background: #132522;
+}
+
+.check-control {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.check-control input {
+  width: 17px;
+  height: 17px;
+  accent-color: #80e0bb;
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid #39564d;
+  border-radius: 8px;
+  padding: 9px 13px;
+  color: #f3f7f5;
+  background: #132522;
+}
+
+main {
+  flex: 1;
+}
+
+.game-page {
+  width: min(100% - 32px, 1120px);
+  margin: 0 auto;
+  padding: 54px 0 40px;
+}
+
+.game-heading {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #80e0bb;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.game-heading h1 {
+  margin: 0;
+  color: #f7fbf8;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+}
+
+.game-intro {
+  max-width: 620px;
+  margin: 17px auto 0;
+  color: #b7c7c1;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.game-toolbar {
+  min-height: 62px;
+  max-width: 950px;
+  margin: 0 auto 22px;
+  padding: 10px 14px 10px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid rgba(173, 211, 194, 0.15);
+  border-radius: 14px;
+  background: rgba(21, 41, 37, 0.78);
+}
+
+.game-status {
+  margin: 0;
+  color: #dce9e3;
+  line-height: 1.5;
+}
+
+.primary-button {
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 18px;
+  color: #0a1b17;
+  background: #80e0bb;
+  font-weight: 800;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.primary-button:hover {
+  background: #a1f0d1;
+  transform: translateY(-1px);
+}
+
+.boards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.board-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid rgba(173, 211, 194, 0.17);
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(25, 48, 43, 0.96), rgba(15, 31, 29, 0.96));
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
+}
+
+.board-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.board-card-heading h2 {
+  margin: 0;
+  color: #f3f7f5;
+  font-size: 1.1rem;
+}
+
+.line-count {
+  color: #a9bcb4;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.bingo-letters {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+
+.bingo-letter {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #39564d;
+  border-radius: 8px;
+  color: #a9bcb4;
+  background: rgba(9, 22, 20, 0.7);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.bingo-letter.is-complete {
+  border-color: #80e0bb;
+  color: #062019;
+  background: #80e0bb;
+}
+
+.bingo-grid {
+  display: grid;
+  gap: 7px;
+  width: 100%;
+}
+
+.bingo-cell {
+  min-width: 0;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid #476359;
+  border-radius: 9px;
+  color: #e5f1eb;
+  background: #1a342e;
+  font-size: clamp(0.88rem, 2.5vw, 1.35rem);
+  font-weight: 700;
+  transition: border-color 120ms ease, background 120ms ease, transform 120ms ease;
+}
+
+.bingo-cell:not(:disabled):hover {
+  border-color: #80e0bb;
+  background: #24483e;
+  transform: translateY(-1px);
+}
+
+.bingo-cell.is-marked {
+  border-color: #edc66d;
+  color: #17160e;
+  background: #edc66d;
+}
+
+.bingo-cell:disabled:not(.is-marked) {
+  opacity: 0.78;
+}
+
+.bingo-cell.is-marked span {
+  font-size: 1.7em;
+  line-height: 1;
+}
+
+.computer-board .bingo-grid {
+  filter: blur(6px);
+  user-select: none;
+}
+.game-hint {
+  margin: 20px 0 0;
+  color: #9fb2aa;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.game-hint strong {
+  color: #d8e9e1;
+}
+
+.site-footer {
+  padding: 17px 20px 24px;
+  color: #7f958b;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .navigation {
+    min-height: 68px;
+    flex-wrap: wrap;
+    padding: 12px 20px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .settings {
+    display: none;
+    width: 100%;
+    padding: 5px 0 10px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .settings.is-open {
+    display: flex;
+  }
+
+  .game-page {
+    padding-top: 40px;
+  }
+
+  .boards {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    padding: 11px 16px;
+  }
+
+  .settings {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .select-control {
+    width: calc(50% - 8px);
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .select-control select {
+    width: 100%;
+  }
+
+  .game-page {
+    width: min(100% - 20px, 1120px);
+    padding-top: 32px;
+  }
+
+  .game-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
+
+  .board-card {
+    padding: 15px;
+  }
+
+  .bingo-grid {
+    gap: 5px;
+  }
+
+  .bingo-cell {
+    border-radius: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* Compact layout for laptop and tablet viewports */
+.game-page {
+  padding: 24px 0 16px;
+}
+
+.game-heading {
+  margin-bottom: 14px;
+}
+
+.eyebrow {
+  margin-bottom: 6px;
+  font-size: 0.7rem;
+}
+
+.game-heading h1 {
+  font-size: clamp(2rem, 5vh, 3.15rem);
+}
+
+.game-intro {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.game-toolbar {
+  min-height: 50px;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+}
+
+.boards {
+  gap: 14px;
+}
+
+.board-card {
+  padding: 14px;
+}
+
+.board-card-heading {
+  margin-bottom: 10px;
+}
+
+.bingo-letters {
+  gap: 5px;
+  margin-bottom: 9px;
+}
+
+.bingo-letter {
+  width: 26px;
+  height: 26px;
+}
+
+.bingo-grid {
+  max-width: min(100%, 38vh);
+  margin-inline: auto;
+  gap: 5px;
+}
+
+.bingo-cell {
+  font-size: clamp(0.76rem, 1.4vw, 0.8rem);
+}
+
+.game-hint {
+  margin-top: 12px;
+  font-size: 0.82rem;
+}
+
+.site-footer {
+  padding: 8px 12px 12px;
+}
+
+/* Keep both boards side by side on tablets */
+@media (max-width: 800px) {
+  .boards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 950px;
+  }
+
+  .board-card {
+    padding: 12px;
+  }
+}
+
+/* Stack boards on narrow phones */
+@media (max-width: 560px) {
+  .boards {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 540px;
+  }
+}
+
+/* Tighten the layout further on shorter screens */
+@media (max-height: 760px) {
+  .navigation {
+    min-height: 58px;
+  }
+
+  .game-page {
+    padding-top: 16px;
+    padding-bottom: 12px;
+  }
+
+  .game-heading {
+    margin-bottom: 10px;
+  }
+
+  .game-intro {
+    margin-top: 7px;
+    line-height: 1.35;
+  }
+
+  .game-toolbar {
+    min-height: 44px;
+    margin-bottom: 8px;
+  }
+
+  .board-card {
+    padding: 10px;
+  }
+
+  .bingo-grid {
+    max-width: min(100%, 34vh);
+  }
+
+  .bingo-letters {
+    margin-bottom: 6px;
+  }
+
+  .game-hint {
+    margin-top: 8px;
+  }
+
+  .site-footer {
+    padding: 5px 10px 8px;
+  }
+}
